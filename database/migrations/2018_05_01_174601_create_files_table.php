@@ -16,6 +16,7 @@ class CreateFilesTable extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('program_id');
+                //$table->foreign('program_id')->references('id')->on('programs');
             $table->string('name');
             $table->unsignedBigInteger('downloads');
             $table->timestamps();
