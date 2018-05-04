@@ -24,6 +24,8 @@ Route::get('/program/{id}/{slug}', 'Frontend\ProgramsController@show')->name('pr
 //=> admin routes
 Route::prefix('admin')->middleware(['auth'])->namespace('Backend')->group(function () {
 
+    Route::get('/', 'PagesController@dashboard')->name('backend.dashboard');
+
     //=> categories routes
     Route::prefix('category')->group(function () {
         Route::get('index', 'CategoriesController@index')->name('categories.index');
