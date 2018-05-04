@@ -82,6 +82,9 @@ body {
 .control-sidebar-menu .menu-info {
 	margin-right: 45px;
 }
+.user-panel > .info {
+    right:55px
+}
 
 /* Side Bar */
 .main-sidebar {
@@ -235,17 +238,6 @@ body {
 @media (max-width: 767px) {
   .main-header .navbar-right {
     float: right;
-  }
-}
-@media (max-width: 1991px) {
-  .content-header > .breadcrumb {
-    position: relative;
-    top: 0;
-    left: 0;
-    right:auto;
-    float: none;
-    background: #d2d6de;
-    padding-right: 10px;
   }
 }
 @media (max-width: 991px) {
