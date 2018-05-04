@@ -24,7 +24,7 @@ class PagesController extends Controller
      */
     public function dashboard()
     {
-        return 'koko';
+        return view('backend.index');
     }
 
     /**
