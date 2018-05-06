@@ -15,8 +15,8 @@ class CreateScreenshotsTable extends Migration
     {
         Schema::create('screenshots', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('program_id');
-                //$table->foreign('program_id')->references('id')->on('programs');
+            $table->unsignedInteger('program_id');
+                $table->foreign('program_id')->references('id')->on('programs');
             $table->string('name');
             $table->timestamps();
         });

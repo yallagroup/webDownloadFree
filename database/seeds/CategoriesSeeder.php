@@ -13,10 +13,12 @@ class CategoriesSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('categories')->truncate();
         Category::create([
             'slug'              => 'internet',
             'title'             => 'برامج إنترنت',
         ]);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

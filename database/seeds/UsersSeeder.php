@@ -13,6 +13,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('users')->truncate();
         User::create([
             'name'              => 'admin',
@@ -22,6 +23,6 @@ class UsersSeeder extends Seeder
             'is_root_admin'     => true,
             'remember_token'    => bcrypt('secret-key'),
         ]);
-
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

@@ -15,10 +15,10 @@ class CreateProgramsTable extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('category_id');
-                //$table->foreign('category_id')->references('id')->on('categories');
-            $table->integer('user_id');
-                //$table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedInteger('category_id');
+                $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedInteger('user_id');
+                $table->foreign('user_id')->references('id')->on('users');
             $table->string('slug');
             $table->string('title');
             $table->string('icon');
