@@ -4,17 +4,22 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Category;
 
 class CategoriesController extends Controller
 {
+    public $categories;
+    public $perPage = 20;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Category $category)
     {
         $this->middleware('auth');
+        $this->categories = $category;
     }
 
     /**
@@ -24,7 +29,8 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+        $items = $this->categories->where('status', 1)->paginate($this->perPage);
+        return view('backend.modules.categories.index', compact('items'));
     }
 
     /**
@@ -34,7 +40,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.modules.categories.create');
     }
 
     /**

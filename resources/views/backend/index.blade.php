@@ -1,18 +1,14 @@
 @extends('backend.layouts.master')
 
-@section('content')
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            {{ trans('backend/master.dashboard') }}
-            <small>{{ trans('backend/master.control-panel') }}</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> {{ trans('backend/master.control-panel') }}</a></li>
-            <li class="active">{{ trans('backend/master.dashboard') }}</li>
-        </ol>
-    </section>
+@section('Title'){{ trans('backend/master.control-panel') }} - {{ trans('backend/master.dashboard') }}@endsection
 
+@section('pageTitle'){{ trans('backend/master.dashboard') }}@endsection
+
+@section('breadcrumb')
+    <li class="active">{{ trans('backend/master.dashboard') }}</li>
+@endsection
+
+@section('content')
     <!-- Main content -->
     <section class="content">
         <!-- Small boxes (Stat box) -->
@@ -22,7 +18,6 @@
                 <div class="small-box bg-aqua">
                     <div class="inner">
                         <h3>150</h3>
-
                         <p>New Orders</p>
                     </div>
                     <div class="icon">

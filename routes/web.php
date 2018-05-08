@@ -27,7 +27,7 @@ Route::prefix('admin')->middleware(['auth'])->namespace('Backend')->group(functi
     Route::get('/', 'PagesController@dashboard')->name('backend.dashboard');
 
     //=> categories routes
-    Route::prefix('category')->group(function () {
+    Route::prefix('categories')->group(function () {
         Route::get('index', 'CategoriesController@index')->name('categories.index');
         Route::get('create', 'CategoriesController@create')->name('category.create');
         Route::post('store', 'CategoriesController@store')->name('category.store');
@@ -37,7 +37,7 @@ Route::prefix('admin')->middleware(['auth'])->namespace('Backend')->group(functi
     });
 
     //=> programs routes
-    Route::prefix('program')->group(function () {
+    Route::prefix('programs')->group(function () {
         Route::get('index', 'ProgramsController@index')->name('programs.index');
         Route::get('create', 'ProgramsController@create')->name('program.create');
         Route::post('store', 'ProgramsController@store')->name('program.store');
