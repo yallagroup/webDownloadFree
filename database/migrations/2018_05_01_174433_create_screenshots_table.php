@@ -18,6 +18,7 @@ class CreateScreenshotsTable extends Migration
             $table->unsignedInteger('program_id');
                 $table->foreign('program_id')->references('id')->on('programs');
             $table->string('name');
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }

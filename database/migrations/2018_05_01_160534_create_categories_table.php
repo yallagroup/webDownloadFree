@@ -20,6 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->boolean('show_in_home')->default(true);
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
 
