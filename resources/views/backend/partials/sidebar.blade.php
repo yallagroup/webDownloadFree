@@ -33,7 +33,7 @@
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-clipboard"></i> <span>{{ trans('backend/categories.control') }}</span>
+                    <i class="fa fa-th-list"></i> <span>{{ trans('backend/categories.control') }}</span>
                     <span class="pull-right-container">
                       <i class="fa fa-angle-left pull-right"></i>
                     </span>

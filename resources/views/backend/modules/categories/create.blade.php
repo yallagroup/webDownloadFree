@@ -23,11 +23,11 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="title">{{ trans('backend/categories.attributes.title') }}</label>
-                                        <input type="text" name="title" class="form-control" id="title" placeholder="{{ trans('backend/categories.attributes.title_hint') }}" required>
+                                        <input type="text" name="title" class="form-control" id="title" placeholder="{{ trans('backend/categories.hints.title') }}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="description">{{ trans('backend/categories.attributes.description') }}</label>
-                                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="{{ trans('backend/categories.attributes.descrip_hint') }}"></textarea>
+                                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="{{ trans('backend/categories.hints.description') }}"></textarea>
                                     </div>
                                 </div>
                                 <!-- /.box-body -->
