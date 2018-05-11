@@ -11,6 +11,9 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             @include('backend.partials.breadcrumb')
+
+            @include('backend.partials.notifications')
+
             @yield('content')
         </div>
 
