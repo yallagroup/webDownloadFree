@@ -42,6 +42,20 @@
                                         <a href="{{ route('category.destroy', $item->id) }}" class="btn btn-danger btn-xs">{{ trans('backend/master.control.delete') }}</a>
                                     </td>
                                 </tr>
+
+                                @if(count($item->childs()))
+                                    @foreach($item->childs() as $child)
+                                        <tr>
+                                            <td>{{ $child->id }}</td>
+                                            <td><i class="fa fa-exchange"></i> {{ $child->title }}</td>
+                                            <td>
+                                                <a href="{{ route('category.edit', $child->id) }}" class="btn btn-primary btn-xs">{{ trans('backend/master.control.edit') }}</a>
+                                                <a href="{{ route('category.destroy', $child->id) }}" class="btn btn-danger btn-xs">{{ trans('backend/master.control.delete') }}</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @endif
+                                
                             @endforeach
                             </tbody></table>
                     </div>
