@@ -17,4 +17,8 @@ class Program extends Master
 		return $this->belongsTo(User::class);
 	}
 
+    public function files()
+    {
+        return $this->hasMany(File::class);
+    }
 }

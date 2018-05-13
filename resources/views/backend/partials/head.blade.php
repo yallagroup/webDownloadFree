@@ -26,8 +26,6 @@
 <link rel="stylesheet" href="{{ asset('backend/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}">
 <!-- Daterange picker -->
 <link rel="stylesheet" href="{{ asset('backend/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css') }}">
-<!-- bootstrap wysihtml5 - text editor -->
-<link rel="stylesheet" href="{{ asset('backend/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
 @if( config('app.locale') == 'ar' )
     <!-- style rtl -->
     <link rel="stylesheet" href="{{ asset('backend/adminlte/dist/css/AdminLTE.rtl.min.css') }}">
@@ -41,3 +39,5 @@
 
 <!-- Google Font -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+@yield('styles')

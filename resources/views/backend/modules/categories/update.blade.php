@@ -26,17 +26,17 @@
                                         <select name="parent_id" class="form-control" id="parent_category">
                                             <option value="">قسم رئيسي</option>
                                             @foreach($categories as $category)
-                                                <option value="{{ $category->id }}"{{ $category->id == $item->parent_id ? ' selected' : '' }}>{{ $category->title }}</option>
+                                                <option value="{{ $category->id }}"{{ $category->id == old('parent_id', $item->parent_id) ? ' selected' : '' }}>{{ $category->title }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="title">{{ trans('backend/categories.attributes.title') }}</label>
-                                        <input type="text" name="title" value="{{ $item->title }}" class="form-control" id="title" placeholder="{{ trans('backend/categories.hints.title') }}" required>
+                                        <input type="text" name="title" value="{{ old('title', $item->title) }}" class="form-control" id="title" placeholder="{{ trans('backend/categories.hints.title') }}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="description">{{ trans('backend/categories.attributes.description') }}</label>
-                                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="{{ trans('backend/categories.hints.description') }}">{!! $item->description !!}</textarea>
+                                        <textarea name="description" class="form-control" id="description" rows="3" placeholder="{{ trans('backend/categories.hints.description') }}">{!! old('description', $item->description) !!}</textarea>
                                     </div>
                                 </div>
                                 <!-- /.box-body -->

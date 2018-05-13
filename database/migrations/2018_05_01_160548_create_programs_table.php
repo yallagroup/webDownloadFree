@@ -25,8 +25,8 @@ class CreateProgramsTable extends Migration
             //$table->string('type')->default('inside');
             $table->string('url')->nullable();
             $table->text('description')->nullable();
-            $table->unsignedBigInteger('views')->dafault(0);
-            $table->unsignedBigInteger('downloads')->dafault(0);
+            $table->unsignedBigInteger('views')->default(0);
+            $table->unsignedBigInteger('downloads')->default(0);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });

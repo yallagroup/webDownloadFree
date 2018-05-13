@@ -18,7 +18,7 @@ class CreateFilesTable extends Migration
             $table->unsignedInteger('program_id');
                 $table->foreign('program_id')->references('id')->on('programs');
             $table->string('name');
-            $table->unsignedBigInteger('downloads');
+            $table->unsignedBigInteger('downloads')->default(0);
             $table->boolean('status')->default(true);
             $table->timestamps();
         });
