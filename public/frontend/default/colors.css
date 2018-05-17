@@ -1,0 +1,74 @@
+/* COLORS */
+body, a { color: #000000; }
+header { border-color: #000000; }
+.wd_logo a:after { border-color:#000000 transparent transparent transparent; }
+.wd_logo, .wd_header .social, .wd_menu, footer { background-color: #000000; }
+
+
+.wd_logo a, nav, nav span a, nav span a:hover, .wd_menu ul li a, .wd_menu .search input[type=submit], .wd_block .title span, .wd_block .title a, .categories .one_section .title b, .wd_categories_block .categories b, .category_title, .rss span a, .sub_categories .sub a, .pages a, .pages b, footer .footer_up a:hover, footer .footer_up span, footer .footer_up span a { color: #FFFFFF; }
+body, .ui-menu .ui-menu, .sections .one_section .stats { background-color: #FFFFFF; }
+
+
+a:hover { color: #0099FF; }
+.sections .one_section, .sections .one_section .photo,.sections .one_section .stats, .categories .one_section { border-color: #0099FF; }
+.wd_header, .sections .one_section .title, .categories .one_section .title { background-color: #0099FF; }
+
+
+.wd_logo a:hover, .wd_left .wd_block .content ul li a:hover, .sections .one_section .stats span, footer .footer_up a { color: #0185B6; }
+nav { border-color: #0185B6; }
+.wd_menu ul li:hover { background-color:#0185B6; }
+
+
+.wd_block .content ul a { color:#333333; }
+.wd_menu .search input[type=search] { border-color: #333333; }
+.wd_menu .search input[type=submit], footer .footer_up span { background-color:#333333; }
+
+
+footer .footer_up, .category .tech span { color: #999999; }
+.wd_block .content ul li { border-color: #999999; }
+
+
+.wd_right .wd_block .content ul li:hover, .wd_block .content .one_stats span { background-color: #BADFEF; }
+
+
+.wd_menu .search input[type=search], .category .tech span b { color: #0065FF; }
+nav span { /*border-color: #0065FF;*/ }
+nav span:before, nav span:after { border-color: transparent transparent transparent #0065FF; }
+.pages a { background-color: #0065FF; }
+
+
+.wd_menu .search input[type=search], .wd_block .content .one_stats, .sections .one_section, .download .content { background-color: #E8F4F9; }
+
+
+.wd_menu .search input[type=submit], footer .footer_up span { border-color: #505050; }
+
+
+.wd_block, .ui-menu .ui-menu, .wd_block .content, .categories .one_section .title b, .wd_categories_block .categories b, .categories .one_section img, .wd_categories_block .categories img, .sub_categories .sub, .category .tech, .category .tech span { border-color: #008BE2; }
+.sub_categories .sub:before { border-color: transparent transparent transparent #008BE2; }
+.category_title, .pages, .sub_categories .sub { background-color: #008BE2; }
+
+
+.categories .one_section .title, .wd_categories_block .categories { border-color: #0073C0; }
+.categories .one_section .title b, .wd_categories_block .categories b, .categories .one_section img, .wd_categories_block .categories img { background-color: #0073C0; }
+
+
+.rss span { border-color: #E88310; }
+.rss span { background-color: #F5972A; }
+
+
+nav, nav span.home { background-color: #0096D7; }
+/* Gradients */
+.wd_block .gradient{
+	background:#0096D7; /* Old browsers */
+	background:-moz-linear-gradient(top, #00b7ea 0%, #0075c4 100%); /* FF3.6+ */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b7ea), color-stop(100%,#0075c4)); /* Chrome,Safari4+ */
+	background:-webkit-linear-gradient(top, #00b7ea 0%,#0075c4 100%); /* Chrome10+,Safari5.1+ */
+	background:-o-linear-gradient(top, #00b7ea 0%,#0075c4 100%); /* Opera 11.10+ */
+	background:-ms-linear-gradient(top, #00b7ea 0%,#0075c4 100%); /* IE10+ */
+	background:linear-gradient(to bottom, #00b7ea 0%,#0075c4 100%); /* W3C */
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#0075c4',GradientType=0 ); /* IE6-9 */
+}
+
+/* Shadows */
+/* .wd_block .title span, .wd_block .title a { text-shadow:0 1px 0 #014c68; } */
+.categories .one_section .title b, .wd_categories_block .categories b, .categories .one_section img, .wd_categories_block .categories img, .pages a { box-shadow: inset 0px 0px 2px 0px #005894; }

@@ -1,0 +1,545 @@
+@charset "utf-8";
+
+/* CSS Document */
+/* CREATED BY : YallaGroup Company [ www.yallagroup.biz ] */
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0px;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+img{border:0;}
+*{margin:0; padding:0; font-size:100%; outline: medium none;}
+input[type=radio]{vertical-align:-2px; margin-left:5px;}
+.nocrops{overflow:hidden; display:block;}
+.top{vertical-align: top;}
+.middle{vertical-align: middle;}
+.bottom{vertical-align: bottom;}
+.center{text-align: center; vertical-align: middle; margin: 0px auto;}
+.clear{border:0 none; clear:both;}
+.hide{display:none;}
+
+@font-face {
+	font-family: 'Yalla_DK_R';
+	src: url('fonts/DroidKufi-Regular.eot');
+	src: url('fonts/DroidKufi-Regular.eot?') format('embedded-opentype'),
+	url('fonts/DroidKufi-Regular.woff') format('woff'),
+	url('fonts/DroidKufi-Regular.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Yalla_DN_R';
+	src: url('fonts/DroidNaskh-Regular.eot');
+	src: url('fonts/DroidNaskh-Regular.eot?') format('embedded-opentype'),
+	url('fonts/DroidNaskh-Regular.woff') format('woff'),
+	url('fonts/DroidNaskh-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family:"Yalla_GE_TM";
+	src: url('fonts/GE_SS_Two_Medium.eot');
+	src:url("fonts/GE_SS_Two_Medium.eot?") format("eot"),
+	url("fonts/GE_SS_Two_Medium.woff") format("woff"),
+	url("fonts/GE_SS_Two_Medium.ttf") format("truetype");
+	font-weight:normal;
+	font-style:normal;
+}
+
+body{
+  margin:0 auto;
+  direction:rtl;
+  text-align:right;
+  font: lighter 12px/20px "Yalla_DN_R", Tahoma, Geneva, sans-serif;
+}
+a{ text-decoration:none; }
+
+
+header{
+   height:133px ;
+   border-top:4px solid ;
+}
+.wd_header{
+   height:108px ;
+   background:url('images/bg_header.png') repeat-x;
+}
+.wd_logo{
+   display:inline-block;
+   position:relative;
+   width:auto;
+   margin:35px 50px 0px 0px;
+   padding:1px 10px 5px 10px;
+}
+.wd_logo a{
+   font:21px "Yalla_GE_TM", "Tahoma";
+   line-height:31px;
+}
+.wd_logo a:after{
+	width:1px;
+	position:absolute;
+	right:30%;
+	bottom:-12px;
+	content:"";
+	border:6px solid;
+}
+.wd_header .social{
+	height: 22px;
+	margin-left: 20px;
+	padding: 2px 8px;
+	position: absolute;
+    top: 0;
+    left: 0;
+}
+.wd_header .social a{
+	margin: 0 1px;
+	display: inline-block;
+	-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'0\'/></filter></svg>#grayscale"); /* Firefox 4+ */
+	filter: gray; /* IE 6-9 */
+}
+.wd_header .social a:hover{
+	-webkit-filter: grayscale(0%); /* Chrome 19+ & Safari 6+ */
+	-moz-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'saturate\' values=\'1\'/></filter></svg>#grayscale"); /* Firefox 4+ */
+	filter: gray; /* IE 6-9 */
+}
+
+nav{
+	float: right;
+    height:24px;
+	border:1px solid;
+	border-radius:2px;
+    font:lighter 14px/20px "Yalla_GE_TM",Tahoma;
+    margin:0 0 5px 0;
+    padding:0 5px;
+	overflow:hidden;
+}
+nav span{
+	height:24px;
+	/*border-left: 2px solid;*/
+    /*border-radius: 0 0 0 20px;*/
+    padding: 0 20px 0 5px;
+    display: inline-block;
+    background: url('images/icon_document.png') no-repeat right center;
+}
+nav span:before{
+    border-style: solid;
+    border-width: 2px;
+    content: "";
+    display: inline-block;
+    float: left;
+    height: 14px;
+    margin: 8px -5px 0 0;
+    transform: rotate(-38deg);
+    -ms-transform:rotate(-38deg); /* IE 9 */
+	-webkit-transform:rotate(-38deg); /* Safari and Chrome */
+    width: 1px;
+}
+nav span:after{
+    border-style: solid;
+    border-width: 2px;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    margin: -2px 5px 0 0;
+    transform: rotate(38deg);
+    -ms-transform:rotate(38deg); /* IE 9 */
+	-webkit-transform:rotate(38deg); /* Safari and Chrome */
+    width: 1px;
+}
+nav span.home{
+    background: url('images/icon_home.png') no-repeat right center;
+}
+.wd_menu{
+   height:24px ;
+   padding-right:20px;
+   overflow:hidden;
+}
+.wd_menu ul li{
+	float:right;
+}
+.wd_menu ul li a{
+    font:bold 12px/24px Tahoma;
+    padding:0px 6px;
+}
+.wd_menu .search{
+	float: left;
+	margin-left: 5px;
+	font: lighter 12px/20px Tahoma, Geneva, sans-serif;
+}
+.wd_menu .search input[type=search]{
+	width: 200px;
+	height: 20px;
+	padding: 0 5px;
+	border: 1px solid;
+	vertical-align: middle;
+	display: inline-block;
+}
+.wd_menu .search input[type=submit]{
+	height: 18px;
+	font: 11px Tahoma;
+	border: 1px solid;
+	padding: 0 5px;
+	vertical-align: middle;
+	display: inline-block;
+	cursor: pointer;
+}
+
+
+.wd_content{
+   margin:4px 0.5%;
+   /*min-width: 960px;*/
+}
+.wd_right{
+    float: right;
+    width: 17%;
+    /*min-width: 160px;*/
+}
+.wd_left{
+    float:left;
+    width:82.4%;
+}
+
+.wd_block, .ui-menu .ui-menu{
+	margin-bottom:5px;
+	border:1px solid;
+	border-radius:2px;
+	float: right;
+	width:100%;
+}
+.ui-menu .ui-menu{
+	z-index: 2;
+}
+.wd_block .title{
+    height:22px;
+    font:lighter 14px/22px "Yalla_GE_TM",Tahoma;
+    padding:1px 3px 0;
+}
+.wd_block .title span{
+	padding-right:20px;
+}
+.wd_left .wd_block .title span{
+    background:url('images/icon_home.png') no-repeat right center;
+}
+.wd_left .wd_block .folder span{
+    background:url('images/icon_folder.png') no-repeat right center;
+}
+.wd_left .wd_block .folder span{
+    background:url('images/icon_folder.png') no-repeat right center;
+}
+.wd_right .wd_block .title span{
+    background:url('images/icon_document.png') no-repeat right center;
+}
+
+.wd_block .content ul li{
+    border-top:1px dashed;
+}
+.wd_block .content ul li:first-child{
+    border-top:0px;
+    padding-top:0px;
+}
+.wd_block .content ul a{
+    display:block;
+    padding:1px 17px 1px 3px;
+    background:url('images/icon_arrow_1.png') no-repeat right center;
+}
+.wd_block .content {
+	border: 2px solid;
+}
+.wd_left .wd_block .content {
+	float: right;
+}
+.ui-menu .ui-menu {
+    position: absolute;
+    width: 180px;
+}
+
+.wd_block .content .one_stats{
+	height: 22px;
+	margin: 3px;
+}
+.wd_block .content .one_stats .one_proparty{
+	width: 62%;
+	display: inline-block;
+	margin-right: 2px;
+	font: 11px Tahoma;	
+}
+.wd_block .content .one_stats span{
+	float: left;
+	width: 33%;
+	height: 22px;
+	display:inline-block;
+	text-align:center;
+	font: 11px/20px Tahoma;
+}
+.wd_categories_block{
+	float: right;
+}
+.wd_categories_block .wd_block{
+	width:49%;
+	height:387px;
+	float:right;
+	margin:0 0 6px 6px;
+}
+.wd_categories_block .sections .one_section{
+	width:98%;
+}
+.category{
+	border: none;
+}
+.category .content{
+	width: 99%;
+	border: 3px solid;
+	position: relative;
+}
+.category .nav , .category_title , .category .photo , .category .tech{
+	float: right;
+}
+.category .nav{
+	position: relative;
+	width: 100%;
+	margin-bottom: 5px;
+	min-height: 33px;
+}
+.category_title{
+	font: lighter 20px/22px "Yalla_GE_TM",Tahoma;
+	padding: 5px 5px 5px 20px;
+	display: inline-block;
+	margin-left: 10px;
+}
+.sub_categories , .sub {
+	position: relative;
+}
+.sub_categories {
+	margin-left: 50px;
+}
+.sub_categories .sub{
+	float: right;
+	height: 27px;
+	margin: 2px 20px 2px 0;
+	border: 1px solid;
+	border-radius: 4px;
+}
+.sub_categories .sub a{
+	display: inline-block;
+    padding: 3px 10px;
+}
+.sub_categories .sub:before {
+    border: 7px solid;
+    content: "";
+    position: absolute;
+    top: 22%;
+    right: -15px;
+    width: 1px;
+}
+.rss span{
+	display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 1px solid;
+    font: lighter 14px/17px Tahoma;
+    height: 20px;
+}
+.rss span a{
+	padding: 1px 15px;
+}
+.content .social{
+	position: absolute;
+	left: 4px;
+	top: 4px;
+}
+.category .sections{
+	padding:0;
+}
+.sections{
+	padding:2px;
+}
+.sections .one_section{
+	width:49%;
+	height:106px;
+	float:right;
+	margin:2px 4px 3px 0px;
+	border:1px solid;
+	position: relative;
+}
+.sections .one_section .title{
+    height:22px;
+    font:lighter 14px/19px "Yalla_DK_R",Tahoma;
+    margin-right:86px;
+    margin-bottom:2px;
+    padding:1px 3px 0;
+	overflow:hidden;
+}
+.sections .one_section .photo{
+    width:75px;
+    height:75px;
+    margin:5px 5px 5px 0;
+    padding-left:6px;
+    float:right;
+    border-left:1px dashed;
+}
+.sections .one_section .details{
+	height:60px;
+	overflow:hidden;
+    font:lighter 11px/20px "Yalla_DN_R",Tahoma;
+    padding:1px 3px 0;
+}
+.sections .one_section .stats{
+	width:270px;
+	height:19px;
+    border-top:1px dashed;
+    border-left:1px dashed;
+}
+.sections .one_section .stats span{
+	margin-right:20px;
+	font:bold 11px Tahoma;
+}
+.wd_block .categories, .cat_list{
+	border: none;
+}
+.wd_left .wd_block .categories span{
+    float: right;
+    width: 62%;
+    padding-right: 5px;
+    background: none;
+}
+.categories .one_section{
+	float: right;
+	width: 32.6%;
+	height: 227px;
+	overflow:hidden;
+	border-style: solid;
+	border-width: 1px 1px 4px 1px;
+	border-radius: 4px;
+	margin-left: 3px;
+	margin-bottom: 5px;
+	overflow:hidden;
+}
+.wd_block .categories ul a{
+    background:url('images/icon_arrow_2.png') no-repeat right center;
+    font: 12px/20px Tahoma;
+}
+.categories .one_section .title{
+	margin-bottom:2px;
+}
+.categories .one_section .title, .wd_categories_block .categories, .wd_category_nav .categories{
+	height:38px;
+    padding:1px 3px 0;
+	overflow:hidden;
+	font:lighter 14px/35px "Yalla_DK_R",Tahoma;
+	border-bottom: 1px solid;
+}
+.categories .one_section img, .wd_categories_block .categories img, .wd_category_nav .categories img{
+	border-radius: 5px;
+    display: inline-block;
+    float: right;
+    margin: 4px 0 0;
+    border: 1px solid;
+    max-height: 24px;
+    max-width: 24px;
+    padding: 2px 10px;
+}
+.categories .one_section .title b, .wd_categories_block .categories b, .wd_category_nav .categories b{
+	width: 40px;
+	height: 18px;
+	display:inline-block;
+	float: left;
+	text-align:center;
+	font-size: 11px;
+	border: 1px solid;
+	border-radius: 4px;
+	line-height: 20px;
+	margin: 8px 0 0 0;
+}
+.pinned a{
+	background: url('images/icon_pinned.png') no-repeat right center;
+	padding-right: 20px; 
+}
+.pages{
+	float: right;
+	padding: 5px 10px 0;
+	margin-top: 5px;
+}
+.pages b , .pages a{
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	font: 12px/18px Tahoma;
+	text-align: center;
+	border-radius: 2px;
+	margin-bottom: 4px;
+}
+.category .info{
+	display: inline-block;
+}
+.software .photo{
+	display: inline-block;
+	padding: 10px 10px 0;
+	width: 75px;
+}
+.category .tech{
+	display: inline-block;
+	margin-top: 15px;
+	padding-right: 3px;
+	border-right: 1px solid;
+}
+.category .tech span{
+	display: block;
+	margin: 4px 0;
+	padding: 3px 4px;
+	border-bottom: 1px solid;
+}
+.category .advert{
+	float: left;
+	margin-top: 40px;
+	padding: 0 5px 10px;
+}
+.category .details{
+	padding: 0 10px 10px;
+	font: lighter 16px/30px "Yalla_DK_R",Tahoma,Geneva,sans-serif;
+}
+.comments{
+	margin-right: 7px;
+	width: 90%;
+}
+.fb-comments, .fb-comments span, .fb-comments iframe { width: 100% !important; }
+
+
+footer{
+   height:70px ;
+}
+footer .footer_up{
+    height: 30px;
+    padding: 10px 20px 0 0;
+    font-size: 11px;
+}
+footer .footer_up span{
+	float:left;
+	margin-left:10px;
+	font: 10px Tahoma;
+	border: 1px solid;
+}
+footer .footer_up span a{
+	padding:1px 5px;
+	direction: ltr;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
