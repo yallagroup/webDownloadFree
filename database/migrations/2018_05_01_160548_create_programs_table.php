@@ -25,6 +25,8 @@ class CreateProgramsTable extends Migration
             //$table->string('type')->default('inside');
             $table->string('url')->nullable();
             $table->text('description')->nullable();
+            $table->unsignedTinyInteger('pinned')->default(0);
+            $table->unsignedTinyInteger('recommended')->default(0);
             $table->unsignedBigInteger('views')->default(0);
             $table->unsignedBigInteger('downloads')->default(0);
             $table->boolean('status')->default(true);
