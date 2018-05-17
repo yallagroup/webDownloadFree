@@ -17,8 +17,8 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3>150</h3>
-                        <p>New Orders</p>
+                        <h3>{{ $categoriesCount }}</h3>
+                        <p>الأقسام</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
@@ -31,9 +31,9 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3>{{ $programsCount }}</h3>
 
-                        <p>Bounce Rate</p>
+                        <p>البرامج</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
@@ -46,7 +46,7 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{{ $usersCount }}</h3>
 
                         <p>User Registrations</p>
                     </div>

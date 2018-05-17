@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Category;
 use App\Http\Controllers\Controller;
+use App\Program;
+use App\User;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -12,9 +15,15 @@ class PagesController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public $categories;
+    public $programs;
+    public $users;
+
+    public function __construct(Category $category, Program $program, User $user)
     {
-        //$this->middleware('auth');
+        $this->categories = $category;
+        $this->programs = $program;
+        $this->users = $user;
     }
 
     /**
@@ -24,7 +33,10 @@ class PagesController extends Controller
      */
     public function dashboard()
     {
-        return view('backend.index');
+        $categoriesCount = $this->categories->where('status', 1)->count();
+        $programsCount = $this->programs->where('status', 1)->count();
+        $usersCount = $this->users->all()->count();
+        return view('backend.index', compact('categoriesCount', 'programsCount', 'usersCount'));
     }
 
     /**
