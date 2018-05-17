@@ -131,20 +131,50 @@ class ProgramsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $program = $this->programs->find($id);
+
         $this->validate($request,[
             'title'         => 'required|min:3|max:250',
-            'icon'          => 'required|image|mimes:jpg,jpeg,png',
+            'icon'          => 'nullable|image|mimes:jpg,jpeg,png',
             'file'          => 'nullable',
             'description'   => 'nullable|min:10|max:6000',
         ]);
+
+        $icon = $request->file('icon');
+        if($icon != null)
+        {
+            $icon_name = 'icon_' . time() . rand(1000,9999) . '.' . $icon->getClientOriginalExtension();
+            $icon->move(public_path('uploads/images'), $icon_name);
+        }
 
         $this->programs->where('id', $id)->update([
             'category_id'   =>  $request->category_id,
             //'slug'          =>  str_slug($request->title,'-',config('app.locale')),
             'title'         =>  $request->title,
+            'icon'          =>  $icon != null ? $icon_name : $program->icon,
             'description'   =>  $request->description,
             'url'           =>  $request->url,
         ]);
+
+
+        $file = $request->file('file');
+
+        if($file != null){
+            $file_name = 'app_' . time() . rand(1000,9999) . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/files'), $file_name);
+
+            if($program->files()->count() > 0)
+            {
+                File::where('program_id', $id)->update([
+                    'name' => $file_name,
+                ]);
+            } else {
+                File::create([
+                    'program_id' => $id,
+                    'name' => $file_name,
+                ]);
+            }
+        }
 
         session()->flash('message', trans('backend/messages.success.updated'));
 
