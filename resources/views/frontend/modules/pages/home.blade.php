@@ -21,10 +21,10 @@
                     <div class="title gradient">
                         <img src="{{ asset('frontend/default/img/icon_3.png') }}" alt="category" />
                         <span><a href="{{ route('category.show', ['id' => $category->id, 'slug' => $category->slug]) }}">{{ $category->title }}</a></span>
-                        <b>{{ $category->programs()->count() }}</b>
+                        <b>{{ $category->programs->count() }}</b>
                     </div>
                     <ul>
-                        @foreach($category->programs() as $program)
+                        @foreach($category->programs as $program)
                             <li>
                                 <a href="{{ route('program.show', ['id' => $program->id, 'slug' => $program->slug]) }}">
                                     {{ $program->title }}

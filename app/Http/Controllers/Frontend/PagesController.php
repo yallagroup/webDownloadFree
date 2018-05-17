@@ -14,7 +14,7 @@ class PagesController extends MasterController
 
     public function homepage()
     {
-        $homeCategories = $this->categories->where('status', 1)->where('parent_id', null)->get();
+        $homeCategories = $this->categories->where('status', 1)->with('programs')->where('parent_id', null)->get();
         $latestPrograms = $this->programs->where('status', 1)->latest()->take(20)->get();
         return view('frontend.modules.pages.home', compact('homeCategories', 'latestPrograms'));
     }

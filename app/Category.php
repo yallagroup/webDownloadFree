@@ -9,12 +9,12 @@ class Category extends Master
 
 	public function childs()
 	{
-		return $this->hasMany(Category::class, 'parent_id')->get();
+		return $this->hasMany(Category::class, 'parent_id');
 	}
 
 	public function programs()
 	{
-		return $this->hasMany(Program::class)->get();
+		return $this->hasMany(Program::class);
 	}
 
 }

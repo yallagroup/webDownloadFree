@@ -22,7 +22,6 @@ class ProgramsController extends Controller
      */
     public function __construct(Category $category, Program $program)
     {
-        $this->middleware('auth');
         $this->categories = $category;
         $this->programs = $program;
     }
@@ -163,7 +162,7 @@ class ProgramsController extends Controller
             $file_name = 'app_' . time() . rand(1000,9999) . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('uploads/files'), $file_name);
 
-            if($program->files()->count() > 0)
+            if($program->files->count() > 0)
             {
                 File::where('program_id', $id)->update([
                     'name' => $file_name,

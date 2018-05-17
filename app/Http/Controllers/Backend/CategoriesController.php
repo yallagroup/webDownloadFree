@@ -20,7 +20,6 @@ class CategoriesController extends Controller
      */
     public function __construct(Category $category, Program $program)
     {
-        $this->middleware('auth');
         $this->categories = $category;
         $this->programs = $program;
     }
@@ -32,7 +31,7 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        $items = $this->categories->where('status', 1)->where('parent_id', null)->paginate($this->perPage);
+        $items = $this->categories->where('status', 1)->where('parent_id', null)->with('childs')->paginate($this->perPage);
         return view('backend.modules.categories.index', compact('items'));
     }
 

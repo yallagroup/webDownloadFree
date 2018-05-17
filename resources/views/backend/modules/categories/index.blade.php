@@ -43,8 +43,8 @@
                                     </td>
                                 </tr>
 
-                                @if(count($item->childs()))
-                                    @foreach($item->childs() as $child)
+                                @if(count($item->childs))
+                                    @foreach($item->childs as $child)
                                         <tr>
                                             <td>{{ $child->id }}</td>
                                             <td><i class="fa fa-exchange"></i> {{ $child->title }}</td>
